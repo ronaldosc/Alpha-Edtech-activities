@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Formulário de campos e de seleção</title>
+    <!-- oculta as setas no campo numero -->
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      user-select: none;
+      font-family: Arial;
+      background-color: blanchedalmond;
+    "
+  >
+    <h3>FORMULÁRIO DE ATUALIZAÇÃO CADASTRAL</h3>
+    <!-- aqui o método GET pode ser implementado para busca na base de dados do backend -->
+    <fieldset>
+      <legend style="color: blue; font-size: larger">
+        <i>Dados pessoais registrados </i>
+      </legend>
+      <form action="/registro" method="GET">
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          value="Fulano de tal"
+          name="nome"
+          id="name"
+          disabled
+        />
+
+        <label for="age">Idade:</label>
+        <input type="number" value="50" name="idade" id="age" disabled />
+        <!-- código de uso apenas do teclado numérico:  onkeypress='return event.charCode >= 48 && event.charCode <= 57' -->
+        <label for="e-mail">E-mail principal:</label>
+        <input
+          type="email"
+          value="user@server.com"
+          name="contato"
+          id="e-mail"
+          disabled
+        />
+      </form>
+    </fieldset>
+    <br />
+    <form action="/registro" method="POST">
+      <fieldset>
+        <legend style="color: blue; font-size: larger">
+          <i>Dados pessoais a atualizar </i>
+        </legend>
+        <label for="name">Nome:</label>
+        <input type="text" maxlength="50" name="nome" id="name" />
+
+        <label for="age">Idade:</label>
+        <input type="number" min="0" max="99" name="idade" id="age" />
+        <!-- onkeypress='return event.charCode >= 48 && event.charCode <= 57' -->
+        <label for="e-mail">E-mail principal:</label>
+        <input type="email" name="contato" id="e-mail" />
+
+        <label for="pwd">Senha mestra (6 caracteres):</label>
+        <input
+          type="password"
+          minlength="6"
+          maxlength="6"
+          name="senha"
+          id="pwd"
+          required
+        />
+      </fieldset>
+      <br />
+      <fieldset>
+        <div>
+          <span
+            ><legend style="color: blue; font-size: larger">
+              <i>Informações opcionais </i>
+              <br />
+            </legend>
+            <label for="date"> Data do último pagamento:</label>
+            <input
+              style="cursor: pointer"
+              type="date"
+              name="datapag"
+              id="date"
+            />
+          </span>
+          <br />
+          <br />
+          <span
+            >Gênero:
+            <input type="radio" name="genero" value="male" id="gender1" />
+            <label for="gender1">Homem</label>
+            <input type="radio" name="genero" value="female" id="gender2" />
+            <label for="gender2">Mulher</label>
+            <input type="radio" name="genero" value="other" id="gender3" />
+            <label for="gender3">Outro</label>
+            <input
+              type="radio"
+              name="genero"
+              value="notdeclared"
+              id="gender"
+              checked
+            />
+            <label for="gender">Não declarar</label>
+          </span>
+        </div>
+        <br />
+        <div>
+          <label for="xp">Indique sua experiência:</label>
+          <select style="cursor: pointer" name="experiencia" id="xp">
+            <optgroup label="Sem experiencia na área">
+              <option hidden value=""></option>
+              <option value="-1">Totalmente inexperiente</option>
+              <option value="0">Outra experiência</option>
+            </optgroup>
+            <optgroup label="Trabalhou na área">
+              <option value="1">1 ano</option>
+              <option value="2+">2 anos ou mais</option>
+            </optgroup>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label for="nav">Navegador preferencial:</label>
+          <input list="browsers" id="nav" />
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Edge"></option>
+            <option value="Firefox"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+          </datalist>
+        </div>
+      </fieldset>
+      <br />
+      <br />
+      <fieldset>
+        <legend style="color: blue; font-size: larger">
+          <i
+            >Escolha abaixo as trilhas que deseja alcançar como desenvolvedor
+          </i>
+        </legend>
+        <ul
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            font-size: large;
+          "
+        >
+          <li>
+            <label class="container" style="padding-right: 15px" for="front"
+              >Front-End</label
+            >
+            <input
+              class="checkmark"
+              style="height: 25px; width: 18px"
+              type="checkbox"
+              id="front"
+              name="devtrack"
+              value="front"
+              tabindex="-1"
+            />
+          </li>
+          <br />
+          <li>
+            <label class="container" style="padding-right: 20px" for="back"
+              >Backend</label
+            >
+            <input
+              class="checkmark"
+              style="height: 25px; width: 18px"
+              type="checkbox"
+              id="back"
+              name="devtrack"
+              value="back"
+              tabindex="-1"
+            />
+          </li>
+          <br />
+          <li>
+            <label class="container" style="padding-right: 15px" for="full"
+              >Full Stack</label
+            >
+            <input
+              class="checkmark"
+              style="height: 25px; width: 18px"
+              type="checkbox"
+              id="full"
+              name="devtrack"
+              value="full"
+              tabindex="-1"
+            />
+          </li>
+          <br />
+          <li>
+            <label class="container" style="padding-right: 35px" for="mobile"
+              >Mobile</label
+            >
+            <input
+              class="checkmark"
+              style="height: 25px; width: 18px"
+              type="checkbox"
+              id="mobile"
+              name="devtrack"
+              value="mob"
+              tabindex="-1"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <button class="setbutton" style="height: 30px; width: 150px" type="reset">
+        Limpar campos
+      </button>
+      <button
+        class="setbutton"
+        style="height: 30px; width: 150px"
+        type="submit"
+      >
+        Enviar dados
+      </button>
+      <br />
+      <br />
+
+      <label for="msg">Espaço para comentar:</label>
+      <br />
+      <textarea
+        style="resize: none"
+        id="msg"
+        name="usuario_msg"
+        rows="3"
+        cols="50"
+        placeholder="Escreva aqui..."
+      ></textarea>
+      <div>
+        <p style="padding-left: 80px">Avalie sua experiência:</p>
+        <span>Insatisfeito</span>
+        <input type="range" step="50" list="tickmarks" />
+        <datalist id="tickmarks">
+          <option value="-1"></option>
+          <option value="0"></option>
+          <option value="1"></option>
+        </datalist>
+        <span>Satisfeito</span>
+      </div>
+    </form>
+  </body>
+</html>
