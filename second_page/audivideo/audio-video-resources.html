@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos Embutidos de Áudio e Vídeo</title>
+  </head>
+  <body
+    style="background-color: azure; font-family: Georgia; font-size: medium"
+  >
+    <!-- Reprodução simples de vídeo, fazer também uso da tag poster para exibição do frame específico -->
+    <header style="font-size: large">
+      <p>
+        Existem atributos que modificam os controles exibidos ao usuário, em
+        especial o atributo <code>controlslist</code> é funcional apenas no
+        navegador Chrome por ser uma API otimizada especificamente para isso,
+        conforme
+        <a
+          target="_blank"
+          href="https://developers.google.com/web/updates/2017/03/chrome-58-media-updates"
+          >documentação detalhada.</a
+        ><br />
+        Assim há como bloquear em separado: tela cheia, velocidade de
+        reprodução, download. Um bom exemplo de uso deses recursos se encontra
+        <a
+          target="_blank"
+          href="https://googlechrome.github.io/samples/media/controlslist.html"
+          >nessa página.</a
+        >
+        <br />
+        Nos demais navegadores se implementa alguns desses bloqueios de recursos
+        do controle por funções da linguagem JavaScript.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2><p>Exemplos de Vídeo</p></h2>
+        <video
+          controls
+          autoplay
+          muted
+          poster="./files/miniature1.png"
+          height="480"
+          disablepictureinpicture
+          controlsList="nodownload nofullscreen"
+        >
+          <source
+            src="https://gotranscript.com/samples/GoTrascript_captions_samples.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support HTML5 video.
+        </video>
+        <br />
+        <video
+          controls
+          height="480"
+          poster="./files/miniature2.png"
+          disablepictureinpicture
+          controlsList="nodownload nofullscreen"
+          preload="metadata"
+        >
+          <source src="./files/video2.ogg" type="video/ogg" />
+          <source src="./files/video2.mp4" type="video/mp4" />
+          <source
+            src="https://cdmdemo.contentdm.oclc.org/utils/getfile/collection/p15700coll2/id/7/filename/video1.ogg"
+            type="video/ogg"
+          />
+          <track
+            kind="subtitles"
+            srclang="en-gb"
+            label="English (UK)"
+            src="./files/video2-UK.vtt"
+          />
+          <track
+            kind="subtitles"
+            srclang="en-us"
+            label="English (US)"
+            src="./files/video2-US.vtt"
+            default
+          />
+          Your browser does not support HTML5 video with subtitles.
+        </video>
+        <!-- script para prevenir o download:  $(document).ready(function(){
+        $('#videoElementID').bind('contextmenu',function() { return false; });
+      });
+      e para desativar o menu do botão direito do mouse usar o script:  oncontextmenu="return false;"
+      atributo kind pode ser 'captions'? -->
+        <br /><br /><br />
+      </section>
+      <section>
+        <h2><p>Exemplos de Áudio</p></h2>
+        <audio
+          controls
+          autoplay
+          loop
+          controlsList="nodownload noplaybackrate"
+          style="width: 888px"
+        >
+          <source
+            src="https://sample-videos.com/audio/mp3/wave.mp3"
+            type="audio/mp3"
+          />
+          <source
+            src="https://file-examples.com/wp-content/uploads/2017/11/file_example_WAV_5MG.wav"
+            type="audio/wav"
+          />
+          <source
+            src="https://file-examples.com/storage/fed7f5feae62719de971a0c/2017/11/file_example_OOG_1MG.ogg"
+            type="audio/ogg"
+          />
+        </audio>
+      </section>
+    </main>
+  </body>
+  <br /><br />
+  <footer>
+    <p><b>Fontes:</b></p>
+    <a href="https://gotranscript.com/captions-and-subtitles-samples"
+      >GoTranscript</a
+    >, acessado em 03/05/2022.
+    <br />
+    <a href="https://sample-videos.com/download-sample-audio.php"
+      >Sample Videos</a
+    ><br />
+    <a href="https://file-examples.com/index.php/sample-audio-files/"
+      >File Examples</a
+    ><br />
+  </footer>
+</html>
