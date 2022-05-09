@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise using iframe &lt;iframe&gt; tag</title>
+  </head>
+  <body>
+    <p>
+      <marquee>Sobre o elemento <i>iframe</i> ...</marquee>
+    </p>
+    <header>
+      <h3>
+        Exemplos de <i>iframe</i> (elemento embutido) na qual exibe conteúdo de
+        outra página:
+      </h3>
+    </header>
+    <section>
+      <div>
+        <span><h4>Questão 1 do Exercício:</h4></span>
+        <iframe
+          src="./own-link.html"
+          title="Resposta da primeira questão - Formulário"
+          width="750"
+          height="600"
+          seamless
+          sandbox="allow-forms"
+        ></iframe>
+        <!-- style="border: none" para retirar a borda do quadro. -->
+      </div>
+      <br /><br />
+      <div>
+        <span><h4>Questão 2 do Exercício:</h4></span>
+        <iframe
+          height="500"
+          style="width: 100%"
+          scrolling="no"
+          title="Resposta da segunda questão - CodePen"
+          src="https://codepen.io/dpersing/embed/preview/JWdeGE?default-tab=html%2Cresult&editable=true"
+          frameborder="no"
+          loading="lazy"
+          allowtransparency="true"
+          allowfullscreen="true"
+        >
+          See the Pen
+          <a href="https://codepen.io/dpersing/pen/JWdeGE">
+            Images with .svg file examples</a
+          >
+          by Devon Persing (<a href="https://codepen.io/dpersing">@dpersing</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <br />
+      <br />
+      <!-- para obter o iframe em código pelo Youtube: na janela do vídeo com o botão direito selecione "copiar código de incorporação"
+         e para ocultar os controles inferiores e atalhos de teclado inserir na url canônica: ?controls=0&disablekb=1 -->
+      <br />
+      <div>
+        <span><h4>Questão 3 do Exercício:</h4></span>
+        <iframe
+          width="800"
+          height="400"
+          src="https://www.youtube.com/embed/sNlycRiaeac?controls=0&disablekb=1"
+          title="Resposta da terceira questão - YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          marginheight="10px"
+          marginwidth="15px"
+        ></iframe>
+      </div>
+      <div>
+        <span><h4>Adicional à Questão 3, no Vimeo:</h4></span>
+        <iframe
+          src="https://player.vimeo.com/video/58253485?autoplay=1&loop=1&controls=0&color=ffffff&title=0&byline=0&portrait=0&muted=1"
+          style="position: relative; top: 0; left: 0; width: 50%; height: 50%"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <br />
+    </section>
+    <hr />
+    <br /><br /><br />
+    <section>
+      <div>
+        <span
+          ><h4>
+            Abaixo, um quadro <i>iframe</i> sem bordas e em que as ligações
+            abaixo dele quando clicadas o alteram com o atributo <i>target</i>:
+          </h4></span
+        >
+        <iframe
+          style="border: none"
+          srcdoc="<h2><center>
+            <br><br><br><br><br><br><br><br>
+            As respostas das questões aparecerão aqui.
+            </center></h2>"
+          title="Iframe Containers"
+          width="800"
+          height="600"
+          seamless
+          name="iframe_exec"
+          sandbox="allow-forms; allow-scripts"
+        ></iframe>
+        <p>
+          <a
+            href="./own-link.html"
+            title="Primeira Resposta"
+            target="iframe_exec"
+            >Resposta ao Exercício 1 (clique)</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://codepen.io/dpersing/embed/preview/JWdeGE?default-tab=html%2Cresult&editable=true"
+            title="Segunda Resposta"
+            target="iframe_exec"
+            >Resposta ao Exercício 2 (clique)</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://player.vimeo.com/video/58253485?autoplay=1&loop=1&controls=0&color=ffffff&title=0&byline=0&portrait=0&muted=1"
+            style="position: relative; top: 0; left: 0; width: 50%; height: 50%"
+            allow="autoplay"
+            title="Terceira Resposta"
+            target="iframe_exec"
+            >Resposta Adicional ao Exercício 3 (clique)</a
+          >
+        </p>
+        <br /><br />
+      </div>
+    </section>
+  </body>
+</html>
