@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Exercise</title>
+  </head>
+  <body>
+    <center>
+      <canvas
+        id="desenho"
+        style="margin-top: 150px; border: 1px solid royalblue"
+        >Texto duplicado esmaecendo do transparente para o opaco, e borrado na
+        parte inferior.</canvas
+      >
+      <br /><br />
+      <hr />
+      <p>Duas imagens abaixo compõem o elemento <i>canvas</i> acima.</p>
+      <img id="img" src="desenho-texto.svg" alt="desenho com frase" />
+      <br /><br /><br />
+      <img id="draw" src="rabiscado.svg" alt="rabisco para sublinhar" />
+    </center>
+  </body>
+  <script>
+    const canvas = document.getElementById('desenho')
+    const cntxt = canvas.getContext('2d', {
+      alpha: 'false',
+      willReadFrequently: 'false'
+    })
+    const imagem1 = document.getElementById('img')
+    cntxt.drawImage(imagem1, 0, 0)
+    const imagem2 = document.getElementById('draw')
+    cntxt.drawImage(imagem2, 50, 80, 200, 100)
+  </script>
+</html>
