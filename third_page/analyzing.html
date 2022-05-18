@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>TESTER</title>
+  </head>
+
+  <body>
+    <div>A<span></span><span></span></div>
+    <div>B<span></span><span></span></div>
+    <div>C<span></span><span></span></div>
+    <div>D<span></span><span></span></div>
+    <div>E<span></span><span></span></div>
+
+    <div>
+      <br />
+
+      <em>italic </em> <i>italic </i><cite>italic </cite>
+
+      <dd>item a</dd>
+      <dd>item b</dd>
+      <dd>item c</dd>
+
+      <br />
+      <p></p>
+      <p></p>
+    </div>
+    <!--   <template>
+    <p>The <strong>HTML Definition element</strong>
+      (<dfn>&lt;dfn&gt;</dfn>) is used to indicate the
+      term being defined within the context of a definition phrase or
+      sentence.</p>
+  </template> -->
+
+    <br />
+
+    <p>
+      This example fills the web page with one new div element for each item in
+      an array.
+    </p>
+    <p>The HTML code of each div element is inside the template element.</p>
+    <p>
+      Click the button below to display the hidden content from the template
+      element.
+    </p>
+
+    <button onclick="showContent()">Show hidden content</button>
+    <template>
+      <div class="myClass">I like:</div>
+    </template>
+    <script>
+      var myArr = ['Audi', 'BMW', 'Ford', 'Honda', 'Jaguar', 'Nissan']
+      function showContent() {
+        var temp, item, a, i
+        temp = document.getElementsByTagName('template')[0]
+        item = temp.content.querySelector('div')
+        for (i = 0; i < myArr.length; i++) {
+          a = document.importNode(item, true)
+          a.textContent += myArr[i]
+          document.body.appendChild(a)
+        }
+      }
+    </script>
+    <style>
+      .myClass {
+        color: white;
+        background-color: DodgerBlue;
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+      }
+    </style>
+  </body>
+</html>
