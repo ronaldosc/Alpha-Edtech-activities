@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Wolf-Sans-Regular;
+  src: url(./fonts/LinikSans-SemiBold.ttf.woff);
+}
+* {
+  border: 1px solid grey;
+}
+
+body {
+  display: inline-flexbox;
+  font-size: larger;
+  font-family: Wolf-Sans-Regular;
+  flex-direction: column;
+
+  background-image: url(./51weWIisxgL._AC_SL1001_-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+section {
+  gap: 400px 100px;
+}
+/* setting this below allow a colorful gradient back in image */
+body::before {
+  /* background: radial-gradient(ellipse at top, #cfd0cf, transparent),
+    radial-gradient(ellipse at bottom, #aeb1ad, transparent); */
+  background-color: rgba(0, 0, 0, 0.37);
+  content: '';
+  background-repeat: repeat;
+  height: 40vh;
+
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.bold {
+  font-weight: bold;
+}
+.more-bold {
+  font-weight: bolder;
+  font-size: 108%;
+}
+#main-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+#topic {
+  font-size: 120%;
+}
+
+.menu-items {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.menu-items > span {
+  padding: 0 5%;
+  font-size: 90%;
+}
+
+#mid-larger {
+  font-weight: bolder;
+  font-size: 300%;
+  align-items: center;
+  margin-right: 95%;
+}
+
+.adjust-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.left-box {
+  margin-left: 10%;
+}
+
+.right-box {
+  margin-right: 10%;
+}
+
+section > span {
+  font-weight: 100;
+}
