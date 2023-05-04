@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 10px;
+  outline: 0;
+}
+body {
+  background: linear-gradient(to bottom, orange 0%, salmon 100%) no-repeat
+    center center fixed;
+}
+
+body,
+body form {
+  font-family: Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+code {
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-left: 50px;
+}
+li {
+  margin: 0;
+  padding: 30px 0 10px 60px;
+  list-style: none;
+  background: url('https://c.tenor.com/hBIzH44sjrkAAAAj/trouble-naughty.gif')
+    no-repeat left center;
+  background-size: 48px;
+  vertical-align: middle;
+}
+form {
+  transition: 0.5s;
+}
+input,
+#operator,
+button {
+  font-size: larger;
+  text-align: center;
+  /* background-color: aliceblue; */
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 10px rgba(10, 50, 0, 0.2);
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+select option:hover {
+  background-color: #744444;
+}
+select {
+  border: 2px solid green;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+label + input[type='number'] {
+  background-color: #0abc;
+  /* appearance: none; */
+  /* opacity: 1;       */
+}
+
+:placeholder-shown {
+  color: #000;
+  text-align: left;
+}
+
+button {
+  transition: 0.1s;
+}
+button[type='button']:hover,
+button[type='button']:focus {
+  background: #0053ba;
+  transition: 0.3s;
+}
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -6px;
+}
+button[type='reset']:focus {
+  outline: initial;
+}
+button:active {
+  transform: scale(0.99);
+}
+
+#operationResult {
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: not-allowed;
+  user-select: none;
+  caret-color: transparent;
+}
+
+#advices {
+  color: #a00;
+  text-shadow: 2px 5px 10px #a00;
+  font-size: 120%;
+}
+
+/* select::-ms-expand {
+  display: none;
+
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);
+}
+select {
+  background-image: url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
+} */
+
+/* @counter-style thumbs {
+  system: cyclic;
+  symbols: '\1F449';
+  suffix: ' '; */
+/* background-image: url('https://emoji-uc.akamaized.net/orig/b7/ff6e60a7fbdc72140d392c093525f7.png'); */
+
+/* -webkit-appearance: textfield;
+   -moz-appearance: textfield;
+   appearance: textfield;
+} */
+
+/* Increasing line-height value makes the arrow buttons larger, while simply height attribute keeps the box itself the desired size: input {
+  height: 30px;
+  line-height: 45px;
+}
+http://jsfiddle.net/BnEmn/1/
+
+Use jQuery to disable the scroll wheel:
+$(':input[type=number]').on('mousewheel', function(e){
+    e.preventDefault();
+});
+
+For disabling scroll option (with the blur effect) for chrome and firefox you can use below js code:
+$(‘:input[type=number]’).on(‘wheel’, function (e) { $(this).blur(); });
+
+
+
+
+If you want some field to have spinners and others not, since having step=”0″ is non-sensical for a spinner, you can do this:
+    input[step="0"]::-webkit-inner-spin-button { -webkit-appearance: none;}
+Any input fields with a step of 0 will not get spinners, the rest will.
+
+*/
+
+/* How do you disable scrolling (cleanly) with AngularJS or HTML5? I’ve been looking through the docs but I can’t seem to find anything… I was momentarily impressed with the HTML5 spec for number but then I noticed this bug
+mod.directive('inputNumber', function () {
+    return {
+      restrict: 'A',
+      link : function (scope, $element) {
+        $element.on('focus', function () {
+          angular.element(this).on('mousewheel', function (e) {
+            e.preventDefault();
+          });
+        });
+        $element.on('blur', function () {
+          angular.element(this).off('mousewheel');
+        });
+      }
+    };
+  });
+apply to all number input elements by default, so I modified it slightly. With the below code, the mousewheel gets disabled automatically (for number inputs) without any extra html!
+module.directive('input',function() {
+    return {
+        restrict: 'E',
+        scope: {
+            type: '@'
+        },
+        link : function (scope, $element) {
+            if (scope.type == 'number') {
+                $element.on('focus', function () {
+                    angular.element(this).on('mousewheel', function (e) {
+                        e.preventDefault();
+                    });
+                });
+                $element.on('blur', function () {
+                    angular.element(this).off('mousewheel');
+                });
+            }
+        }
+    }
+}); */

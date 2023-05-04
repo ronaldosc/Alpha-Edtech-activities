@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="icon" href="null:" />
+    <title>Terceiro JavaScript - operações matemáticas básicas</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Cálculo com as quatro operações matemáticas básicas</h1>
+      <p>
+        As operações básicas aqui abordadas são soma, subtração, multiplicação e
+        divisão.
+        <br />
+        Sendo 'a' e 'b' os números a serem calculados e 'c' é o resultado,
+        temos:
+      </p>
+
+      <code> a + b = c </code> <br />
+      <code> a - b = c </code> <br />
+      <code> a * b = c </code> <br />
+      <code> a / b = c </code> <br />
+    </header>
+    <h3>Instrução:</h3>
+    <ul>
+      <li>Insira um número em cada uma das caixinhas verde-azuladas abaixo.</li>
+      <li>A seguir, selecione a operação desejada pela lista de opções.</li>
+      <li>E por último clique no botão "Revelar resultado".</li>
+      <li>
+        Caso deseje limpar o resultado e os campos inseridos, clique no botão
+        "Limpar".
+      </li>
+    </ul>
+
+    <form action="" name="matOper">
+      <div>
+        <label for="operand-left"></label
+        ><input
+          type="number"
+          id="operand-left"
+          value=""
+          placeholder="Número..."
+        />
+        <select name="operator" id="operator">
+          <!-- onfocus="this.size=4;"
+          onblur="this.size=0;"
+          onchange="this.size=1; this.blur()" -->
+          <option value="" disabled selected hidden>
+            Escolha uma operação 👇
+          </option>
+          <option value="0">➕ Soma</option>
+          <option value="1">➖ Subtração</option>
+          <option value="2">✖ Multiplicação</option>
+          <option value="3">➗ Divisão</option>
+        </select>
+        <label for="operand-right"></label
+        ><input
+          type="number"
+          id="operand-right"
+          value=""
+          placeholder="Outro número..."
+        />
+        <!-- <select name="subtraction" id="sbt">
+            subtraction
+          </select>
+          <select name="multiplication" id="mlt">
+            multiplication
+          </select>
+          <select name="division" id="dvs">
+            division
+          </select> -->
+      </div>
+      <button type="button" id="send-result" onclick="mathematicalOperations()">
+        Revelar resultado
+      </button>
+      <div id="advices"></div>
+      <input
+        type="number"
+        id="operationResult"
+        tabindex="-1"
+        contenteditable="false"
+      />
+      <button type="reset" onclick="clearResult()">Limpar</button>
+    </form>
+    <script src="./index.js" type="text/javascript"></script>
+  </body>
+</html>

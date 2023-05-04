@@ -1,0 +1,66 @@
+body {
+  background-color: #5f9ea0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li {
+  line-height: 30px;
+}
+
+input {
+  width: 50%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+input[type='button'],
+input[type='reset'] {
+  width: 250px;
+  height: 50px;
+  font: normal larger bold, 'Verdana';
+}
+input[name='bmi'],
+[name='meaning'] {
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 10px;
+  user-select: none;
+  border-width: 2px;
+}
+input[name='bmi'] {
+  width: 100px;
+}
+input[name='meaning'] {
+  font: italic larger bold, 'Verdana';
+  width: 85%;
+  text-align: center;
+}
+input[type='button'],
+[type='reset'] {
+  background-color: #5f9ea0;
+  color: white;
+  margin-left: 100px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+input[type='button']:hover,
+input[type='reset']:hover {
+  background-color: #4682b4;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+fieldset {
+  margin-left: 100px;
+  margin-top: 50px;
+  max-width: 500px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}

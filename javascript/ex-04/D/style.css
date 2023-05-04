@@ -1,0 +1,14 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80vw;
+}
+
+#sortear {
+    padding: 15px;
+    margin-left: 200px;
+}
+
+#resultado {
+    font-style: italic;
+    font-size: larger;
+}

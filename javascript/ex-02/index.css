@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 50px 100px;
+  margin-top: 0px;
+  text-align: center;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: azure;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+hr {
+  position: absolute;
+  top: 3%;
+  padding: 1px;
+  width: 100%;
+  border: 0.5px solid #0007;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-top: 50px;
+  text-align: center;
+  min-width: 20px;
+}
+
+button,
+input {
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5% / 50%;
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+}
+input[type='number'] {
+  appearance: textfield;
+}
+input[type='date'] {
+  width: 100%;
+  empty-cells: hide;
+}
+fieldset {
+  border: 1px solid black;
+  padding-bottom: 5px;
+  margin: 10px;
+}
+footer {
+  text-overflow: clip;
+  max-width: 100%;
+  text-align: center;
+}
+#result-days {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  background-color: #dd9c;
+  box-shadow: 2px 2px 20px #0007, inset 0 0 50px #0007;
+  border-radius: 10px;
+}
+/* only after result appears it will injected: */
+#result-days span {
+  line-height: 3rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555f;
+  text-shadow: 1px 1px 10px #0007;
+}

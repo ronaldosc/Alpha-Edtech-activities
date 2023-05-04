@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="null:" />
+    <link rel="stylesheet" href="index.css" />
+    <title>
+      Segundo JavaScript - comparação de números e palavras, e datas
+    </title>
+  </head>
+  <body>
+    <hr />
+    <form action="">
+      <label for="numb"
+        ><h3>Insira dois números a fim de serem comparados em valor:</h3></label
+      >
+      <input type="number" name="num-first" id="num-first" required value="" />
+      <br />
+      <input type="number" name="num-second" id="num-second" value="" />
+      <!-- <input type="number" name="comparison-result" id="result" /> -->
+      <button type="button" id="getResult1" onclick="compareTwoNumbers()">
+        Comparar
+      </button>
+      <button type="reset">Limpar campos</button>
+      <br />
+      <div id="result-num"></div>
+    </form>
+    <form action="">
+      <label for="word"
+        ><h3>
+          Insira duas palavras a fim de serem comparadas em tamanho:
+        </h3></label
+      >
+      <input type="text" name="word-first" id="word-first" value="" />
+      <br />
+      <input type="text" name="word-second" id="word-second" value="" />
+      <button type="button" id="getResult2" onclick="compareTwoWords()">
+        Comparar
+      </button>
+      <div id="result-word" type="text"></div>
+      <button type="reset">Limpar campos</button>
+      <br />
+    </form>
+    <form action="">
+      <label for="date"
+        ><h3>
+          Insira a data de nascimento para estimar dias de vida restantes:
+        </h3></label
+      >
+      <input type="date" name="date-of-birth" id="date-of-birth" />
+      <fieldset>
+        <p>Gênero:</p>
+        <input type="radio" value="73.1" name="gender" id="gender-m" />
+        <label for="gender-m">Homem</label>
+        <input type="radio" value="80.1" name="gender" id="gender-f" />
+        <label for="gender-f">Mulher</label>
+      </fieldset>
+      <button type="button" id="getResult3" onclick="calculateDays()">
+        Calcular os dias de vida*
+      </button>
+      <div id="result-days"></div>
+      <button type="reset" onclick="clearResult()">Limpar campos</button>
+      <footer>
+        * Cálculo tendo como base a expectativa de vida fornecida pelo IBGE para
+        homens ou mulheres.
+      </footer>
+    </form>
+    <!-- colocar o 'validate' em algum lugar, para certificar que o número foi digitado corretamente -->
+    <script src="index.js"></script>
+  </body>
+</html>

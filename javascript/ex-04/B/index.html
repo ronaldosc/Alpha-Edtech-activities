@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="null:" />
+    <title>Quarto JavaScript _parte B - números aleatórios inteiros</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="min">Valor Mínimo</label>
+      <input type="text" name="min" id="min" value="" />
+      <label for="max">Valor Máximo</label>
+      <input type="text" name="max" id="max" value="" />
+      <button type="button" onclick="getRandomNumberBetweenIntegers()">
+        Sortear
+      </button>
+      <p>Número sorteado:<input type="button" id="result" value="" /></p>
+      <p> <input type="reset" id="clean" value="limpar" /></p>
+    </form>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

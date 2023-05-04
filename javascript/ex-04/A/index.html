@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="card.css" />
+  <link rel="icon" href="null:">
+  <title>Quarto JavaScript _parte A - calculadora IMC</title>
+</head>
+
+<body>
+  <header>
+    <h1>Cálculo do Índice de Massa Corporal (IMC)</h1>
+    <p>
+      Como saber o peso ideal? A obesidade é determinada pelo Índice de Massa
+      Corporal (IMC) que é calculado dividindo-se o peso (em kg) pelo quadrado
+      da altura (em metros). O resultado revela se o peso está dentro da faixa
+      ideal, abaixo ou acima do desejado.
+      Classificação do IMC:
+
+    <ul>
+      <li>Menor que 18,5 - Abaixo do peso</li>
+      <li>Entre 18,5 e 24,9 - Peso normal</li>
+      <li>Entre 25,0 e 29,9 - Sobrepeso (acima do peso desejado)</li>
+      <li>Igual ou acima de 30,0 - Obesidade</li>
+    </ul>
+
+    Cálculo do IMC:
+
+    <code>IMC = peso (kg) / altura (m) x altura (m)</code>
+
+    <p>Exemplo: João tem 83 kg e sua altura é 1,75 m</p>
+    <p>Altura x altura = 1,75 x 1,75 = 3.0625</p>
+    <p>IMC = 83 divididos por 3,0625 = 27,10</p>
+
+    O resultado de 27,10 de IMC indica que João está acima do peso desejado (sobrepeso).
+    </p>
+    <a href="https://bvsms.saude.gov.br/bvs/dicas/215_obesidade.html" target="_blank">
+      Referência</a>
+  </header>
+
+  <br />
+  <!-- https://arquivos.sbn.org.br/equacoes/eq5.htm -->
+  <!--  IMC (kg/m2)	Classificação
+    < 16	Magreza grau III
+    16.0 - 16.9	Magreza grau II
+    17.0 - 18.4	Magreza grau I
+    18.5 - 24.9	Adequado
+    25.0 - 29.9	Pré-obeso
+    30.0 - 34.9	Obesidade grau I
+    35.0 - 39.9	Obesidade grau II
+    >= 40	Obesidade grau III
+ -->
+  <!-- http://www.who.int/nut/db_bmi.htm -->
+  <fieldset>
+    <form name="bmiForm">
+      <h4>Agora vamos calcular o seu... </h4>
+      Seu peso (kg): <input type="text" name="weight" /><br />
+      Sua altura (cm): <input type="text" name="height" /><br />
+      <input type="button" value="Calcular" onclick="calcBmi()" /><br />
+      <h4>Seu IMC é: <input type="text" name="bmi" disabled /> kg/m²</h4>
+      Sua classificação pelo IMC é: <br>
+      <input type="text" name="meaning" id="ab" disabled /><br />
+      <input type="reset" value="Limpar campos" />
+    </form>
+  </fieldset>
+  <script src="script.js"></script>
+</body>
+
+</html>
